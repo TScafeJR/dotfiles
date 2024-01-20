@@ -1,0 +1,9 @@
+*
+
+!.gitignore
+!Makefile
+!.vimrc
+!.config
+.config/*
+!.config/nvim/
+!.config/nvim/**

@@ -1,7 +1,5 @@
 return {
-	{
-		'preservim/nerdtree'
-	},
+		'preservim/nerdtree',
 	{
 		'nvim-telescope/telescope.nvim', version = '0.1.4',
 		-- or                            , branch = '0.1.x',
@@ -36,6 +34,7 @@ return {
 		end
 	},
 	'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+	'ryanoasis/vim-devicons',
 	{
 		'neoclide/coc.nvim',
 		branch = 'release'
@@ -44,8 +43,6 @@ return {
 	{ "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} },
 	'jose-elias-alvarez/null-ls.nvim',
 	'folke/neodev.nvim',
-	'mfussenegger/nvim-lint',
-	'mhartington/formatter.nvim',
 	'lewis6991/gitsigns.nvim',
 	'chentoast/marks.nvim',
 	{
@@ -55,13 +52,11 @@ return {
 	{"akinsho/toggleterm.nvim", config = function()
 		require("toggleterm").setup()
 	end},
-	{ 'HerringtonDarkholme/yats.vim' },
-	{ 'fatih/vim-go' },
-	{ 'pangloss/vim-javascript' },
-	{ 'leafgarland/typescript-vim' },
-	{ 'maxmellon/vim-jsx-pretty' },
-	{ 'preservim/nerdtree' },
-	{ 'github/copilot.vim' },
+	'HerringtonDarkholme/yats.vim',
+	'fatih/vim-go',
+	'github/copilot.vim',
+	'nvim-neotest/nvim-nio',
+	'leoluz/nvim-dap-go',
 	{
 		"folke/todo-comments.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },

@@ -61,5 +61,6 @@ return {
 		"folke/todo-comments.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {}
-	}
+	},
+	{ 'wakatime/vim-wakatime', lazy = false }
 }

@@ -24,3 +24,8 @@ nnoremap <silent> gv :vsplit<CR>gd
 nnoremap <silent> gs :split<CR>gd
 nnoremap <leader>u :e .<CR>
 nnoremap <silent> <C-y> :ToggleTerm size=40 dir=. direction=vertical name=term<CR>
+
+
+if $TERM ==# "xterm"
+  set background=light
+endif

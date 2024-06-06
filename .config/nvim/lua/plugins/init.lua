@@ -62,5 +62,6 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {}
 	},
-	{ 'wakatime/vim-wakatime', lazy = false }
+	{ 'wakatime/vim-wakatime', lazy = false },
+	'nvim-lualine/lualine.nvim'
 }

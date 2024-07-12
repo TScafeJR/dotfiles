@@ -43,7 +43,6 @@ return {
 	{ "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} },
 	'jose-elias-alvarez/null-ls.nvim',
 	'folke/neodev.nvim',
-	'lewis6991/gitsigns.nvim',
 	'chentoast/marks.nvim',
 	{
 		"iamcco/markdown-preview.nvim",

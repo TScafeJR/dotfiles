@@ -8,6 +8,7 @@ set shiftwidth=2
 set nofixendofline
 set list
 set listchars=tab:>-,nbsp:-,space:·
+set clipboard=unnamedplus
 
 autocmd BufEnter * lcd %:p:h
 

@@ -4,6 +4,7 @@
 !Makefile
 !.vimrc
 !.config
+!.zshrc
 .config/*
 !.config/nvim/
 !.config/nvim/**

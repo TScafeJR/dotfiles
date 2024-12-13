@@ -1,4 +1,4 @@
-set number
+set number relativenumber
 set autochdir
 set wildmenu
 set wildmode=longest,list,full

@@ -5,7 +5,7 @@ return {
 		-- or                            , branch = '0.1.x',
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
-	{ "catppuccin/nvim", name = "catppuccin", config = function() vim.cmd("colorscheme catppuccin") end },
+	{ 'catppuccin/nvim', name = 'catppuccin', config = function() vim.cmd('colorscheme catppuccin') end },
 	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 	'nvim-treesitter/playground',
 	{
@@ -28,7 +28,7 @@ return {
 	'm4xshen/autoclose.nvim',
 	'f-person/git-blame.nvim',
 	{
-		"klen/nvim-test",
+		'klen/nvim-test',
 		config = function()
 			require('nvim-test').setup()
 		end
@@ -40,16 +40,16 @@ return {
 		branch = 'release'
 	},
 	'mfussenegger/nvim-dap',
-	{ "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap"} },
+	{ 'rcarriga/nvim-dap-ui', dependencies = {'mfussenegger/nvim-dap'} },
 	'jose-elias-alvarez/null-ls.nvim',
 	'folke/neodev.nvim',
 	'chentoast/marks.nvim',
 	{
-		"iamcco/markdown-preview.nvim",
-		build = function() vim.fn["mkdp#util#install"]() end,
+		'iamcco/markdown-preview.nvim',
+		build = function() vim.fn['mkdp#util#install']() end,
 	},
-	{"akinsho/toggleterm.nvim", config = function()
-		require("toggleterm").setup()
+	{'akinsho/toggleterm.nvim', config = function()
+		require('toggleterm').setup()
 	end},
 	'HerringtonDarkholme/yats.vim',
 	'fatih/vim-go',
@@ -57,10 +57,12 @@ return {
 	'nvim-neotest/nvim-nio',
 	'leoluz/nvim-dap-go',
 	{
-		"folke/todo-comments.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		'folke/todo-comments.nvim',
+		dependencies = { 'nvim-lua/plenary.nvim' },
 		opts = {}
 	},
 	{ 'wakatime/vim-wakatime', lazy = false },
-	'nvim-lualine/lualine.nvim'
+	'nvim-lualine/lualine.nvim',
+	{ 'mistricky/codesnap.nvim', build = 'make' },
+	{ 'R-nvim/R.nvim', },
 }

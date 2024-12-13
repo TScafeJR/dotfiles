@@ -64,5 +64,5 @@ return {
 	{ 'wakatime/vim-wakatime', lazy = false },
 	'nvim-lualine/lualine.nvim',
 	{ 'mistricky/codesnap.nvim', build = 'make' },
-	{ 'R-nvim/R.nvim', },
+	{ 'R-nvim/R.nvim' },
 }

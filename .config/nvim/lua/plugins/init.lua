@@ -1,5 +1,5 @@
 return {
-		'preservim/nerdtree',
+	'preservim/nerdtree',
 	{
 		'nvim-telescope/telescope.nvim', version = '0.1.4',
 		-- or                            , branch = '0.1.x',
@@ -24,7 +24,6 @@ return {
 			'L3MON4D3/LuaSnip',
 		}
 	},
-	'hrsh7th/nvim-compe',
 	'm4xshen/autoclose.nvim',
 	'f-person/git-blame.nvim',
 	{

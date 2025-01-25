@@ -38,6 +38,7 @@ return {
   {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
+    lazy = false,
   },
   { 'mistricky/codesnap.nvim', build = 'make' },
 }

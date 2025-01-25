@@ -1,4 +1,3 @@
-require("scafeio.remap")
+require('scafeio.remap')
 
-vim.o.completeopt = "menuone,noselect"
-
+vim.o.completeopt = 'menuone,noselect'

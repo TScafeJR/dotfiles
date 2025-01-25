@@ -1,5 +1,5 @@
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "c", "javascript", "lua", "vim", "typescript", "go", "vimdoc", "query", 'latex', 'rnoweb' },
+  ensure_installed = { 'c', 'javascript', 'lua', 'vim', 'typescript', 'go', 'vimdoc', 'query', 'latex', 'rnoweb', 'yaml' },
 
   sync_install = false,
 
@@ -16,6 +16,5 @@ require'nvim-treesitter.configs'.setup {
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
-		disable = { "sql" },
   },
 }

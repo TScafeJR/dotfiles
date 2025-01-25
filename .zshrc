@@ -26,10 +26,13 @@ export GOPATH=~/go
 export GOBIN="$GOPATH/bin"
 export PATH=$PATH:$GOBIN
 export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -zsh)"
-alias python='python3'
-PYTHONPATH="/usr/local/bin/python:$PYTHONPATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+alias python="$(pyenv which python)"
+PYTHONPATH="$PYENV_ROOT/shims:$PYTHONPATH"
 
 pro() {
 	set -o allexport;

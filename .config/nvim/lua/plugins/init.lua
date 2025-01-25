@@ -5,27 +5,21 @@ return {
 		-- or                            , branch = '0.1.x',
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
+	{
+		'vhyrro/luarocks.nvim',
+		priority = 1000,
+		config = true,
+	},
 	{ 'catppuccin/nvim', name = 'catppuccin', config = function() vim.cmd('colorscheme catppuccin') end },
 	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 	'nvim-treesitter/playground',
-	{
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v3.x',
-		dependencies = {
-			--- Uncomment these if you want to manage LSP servers from neovim
-			'williamboman/mason.nvim',
-			'williamboman/mason-lspconfig.nvim',
-
-			-- LSP Support
-			'neovim/nvim-lspconfig',
-			-- Autocompletion
-			'hrsh7th/nvim-cmp',
-			'hrsh7th/cmp-nvim-lsp',
-			'L3MON4D3/LuaSnip',
-		}
-	},
 	'm4xshen/autoclose.nvim',
 	'f-person/git-blame.nvim',
+	{'neovim/nvim-lspconfig'},
+	{'hrsh7th/cmp-nvim-lsp'},
+	{'hrsh7th/nvim-cmp'},
+	'williamboman/mason.nvim',
+	'williamboman/mason-lspconfig.nvim',
 	{
 		'klen/nvim-test',
 		config = function()

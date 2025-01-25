@@ -21,7 +21,10 @@ compdef _makefile_targets make
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 alias cgr='cargo run --release';
-alias pip='pip3';
+alias pip="$(pyenv which pip)"
+alias :q="exit";
+alias python="$(pyenv which python)"
+
 export GOPATH=~/go
 export GOBIN="$GOPATH/bin"
 export PATH=$PATH:$GOBIN
@@ -31,7 +34,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-alias python="$(pyenv which python)"
 PYTHONPATH="$PYENV_ROOT/shims:$PYTHONPATH"
 
 pro() {

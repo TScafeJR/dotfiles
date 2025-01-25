@@ -18,8 +18,6 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <silent> gv :vsplit<CR>gd
 nnoremap <silent> gs :split<CR>gd
 nnoremap <leader>u :e .<CR>
-nnoremap <silent> <C-y> :ToggleTerm dir=. name=term<CR>
-
 
 if $TERM ==# "xterm"
   set background=light

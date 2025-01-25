@@ -16,7 +16,7 @@ return {
       vim.cmd('colorscheme catppuccin')
     end,
   },
-  { 'nvim-treesitter/nvim-treesitter', version = '0.1.4', build = ':TSUpdate' },
+  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
   'm4xshen/autoclose.nvim',
   'neovim/nvim-lspconfig',
   'hrsh7th/cmp-nvim-lsp',
@@ -35,6 +35,9 @@ return {
   'nvim-neotest/nvim-nio',
   'leoluz/nvim-dap-go',
   { 'wakatime/vim-wakatime', lazy = false },
-  'nvim-lualine/lualine.nvim',
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+  },
   { 'mistricky/codesnap.nvim', build = 'make' },
 }

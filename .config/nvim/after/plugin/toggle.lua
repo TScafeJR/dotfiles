@@ -1,5 +1,25 @@
 require('toggleterm').setup()
 
+vim.keymap.set(
+  'n',
+  '<C-y>',
+  ':ToggleTerm dir=. name=term<CR>',
+  { silent = true }
+)
+vim.keymap.set('n', '<C-g>', function()
+  local current_dir = vim.fn.expand('%:p:h') -- Get current file's directory
+  local git_root = vim.fn.systemlist(
+    'git -C ' .. vim.fn.shellescape(current_dir) .. ' rev-parse --show-toplevel'
+  )[1]
+
+  if git_root and vim.fn.isdirectory(git_root) == 1 then
+    vim.cmd('cd ' .. git_root)
+    vim.cmd('ToggleTerm dir=' .. git_root .. ' name=git-root')
+  else
+    vim.cmd('ToggleTerm dir=. name=git-root')
+  end
+end, { silent = true, noremap = true })
+
 function _G.set_terminal_keymaps()
   local opts = { buffer = 0 }
   vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)

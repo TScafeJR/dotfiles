@@ -36,12 +36,16 @@ eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 PYTHONPATH="$PYENV_ROOT/shims:$PYTHONPATH"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
+[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+
 pro() {
 	set -o allexport;
 	# shellcheck source=~/go/pro-juice/.env-local
 	source ~/go/pro-juice/.env-local;
 	set +o allexport;
-	source ~go/pro-juice/cmd/cli/autocomplete/zsh_complete
+	source ~/go/pro-juice/cmd/cli/autocomplete/zsh_complete
 	pro-juice "$@";
 }
 
@@ -49,4 +53,10 @@ less() {
 	bat --paging=always --color=always "$@"
 }
 
+copy_err(){
+	"$@" 2>&1 1>/dev/null | pbcopy
+}
+
 fpath=(~/.zsh/completions $fpath)
+
+

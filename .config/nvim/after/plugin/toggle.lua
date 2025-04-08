@@ -6,7 +6,8 @@ vim.keymap.set(
   ':ToggleTerm dir=. name=term<CR>',
   { silent = true }
 )
-vim.keymap.set('n', '<C-g>', function()
+
+vim.keymap.set('n', '<Leader>f', function()
   local current_dir = vim.fn.expand('%:p:h') -- Get current file's directory
   local git_root = vim.fn.systemlist(
     'git -C ' .. vim.fn.shellescape(current_dir) .. ' rev-parse --show-toplevel'

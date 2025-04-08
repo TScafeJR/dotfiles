@@ -14,4 +14,4 @@ local function enable_copilot_if_node_version_sufficient()
   end
 end
 
-enable_copilot_if_node_version_sufficient()
+--enable_copilot_if_node_version_sufficient()

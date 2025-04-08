@@ -1,6 +1,6 @@
 function ColorMyPencils(color, style)
   style = style or 'dark'
-  color = color or ((style == 'dark') and 'catppuccin' or 'catppuccin-latte')
+  color = color or ((style == 'dark') and 'oldworld' or 'catppuccin-latte')
 
   vim.cmd.colorscheme(color)
 
@@ -15,7 +15,9 @@ local active = 'dark'
 vim.keymap.set('n', '<Leader>t', function()
   local style = active == 'dark' and 'light' or 'dark'
   active = style
-  local theme = style == 'dark' and 'catppuccin' or 'catppuccin-latte'
+  local theme = style == 'dark' and 'oldworld' or 'catppuccin-latte'
   ColorMyPencils(theme, style)
   return nil
 end)
+
+ColorMyPencils('catppuccin', 'dark')
